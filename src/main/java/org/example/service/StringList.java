@@ -1,5 +1,6 @@
 package org.example.service;
 
+
 public interface StringList {
     String[] getStringList();
 

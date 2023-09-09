@@ -3,9 +3,7 @@ package org.example;
 import org.example.service.StringList;
 import org.example.service.StringListImpl;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {

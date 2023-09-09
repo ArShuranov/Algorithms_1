@@ -1,6 +1,6 @@
 package org.example.service;
 
-import java.util.Arrays;
+//my own realisation ArrayList (String[])
 
 public class StringListImpl implements StringList {
     private String[] stringList = new String[0];
@@ -10,7 +10,7 @@ public class StringListImpl implements StringList {
         return stringList;
     }
 
-
+//when adding an element a new array is created 1 more
     @Override
     public String add(String item) {
         if (item != null) {
@@ -25,6 +25,7 @@ public class StringListImpl implements StringList {
         return stringList[stringList.length - 1];
     }
 
+//This is how we add an element by index. A new array is also created 1 more.
     @Override
     public String add(int index, String item) {
         if (index > stringList.length) {
@@ -45,6 +46,7 @@ public class StringListImpl implements StringList {
         return stringList[index];
     }
 
+//change the value of an element by index
     @Override
     public String set(int index, String item) {
         if (index >= stringList.length) {
@@ -55,6 +57,9 @@ public class StringListImpl implements StringList {
         }
     }
 
+//If there is such an element, then we reduce our array by 1.
+// If not, then an exception will be thrown when comparing the arrays.
+// We find the index of this element, and then assign all the elements to a new array except for the one to be removed.
     @Override
     public String remove(String item) {
         int divider = 0;
@@ -82,7 +87,7 @@ public class StringListImpl implements StringList {
         return item;
     }
 
-
+//Almost the same as above
     @Override
     public String remove(int index) {
         if (index >= stringList.length) {
@@ -101,7 +106,7 @@ public class StringListImpl implements StringList {
         }
         return buffer_1[index];
     }
-
+//if contains item return true/false
     @Override
     public boolean contains(String item) {
         for (int i = 0; i < stringList.length; i++) {
@@ -111,7 +116,7 @@ public class StringListImpl implements StringList {
         }
         return false;
     }
-
+//if contains item return index or -1
     @Override
     public int indexOf(String item) {
         for (int i = 0; i < stringList.length; i++) {
@@ -121,7 +126,7 @@ public class StringListImpl implements StringList {
         }
         return -1;
     }
-
+    //search element from the end return index or -1
     @Override
     public int lastIndexOf(String item) {
         for (int i = stringList.length - 1; i > 0; i--) {
@@ -131,7 +136,7 @@ public class StringListImpl implements StringList {
         }
         return -1;
     }
-
+//get element by index or exception if index > length
     @Override
     public String get(int index) {
         if (index >= stringList.length) {
@@ -139,7 +144,7 @@ public class StringListImpl implements StringList {
         }
         return stringList[index];
     }
-
+//comparison of two lists
     @Override
     public boolean equals(StringList otherList) {
         if (otherList == null) {

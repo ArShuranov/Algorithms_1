@@ -8,7 +8,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Objects;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -366,41 +365,5 @@ public class StringListImplTest {
 
     }
 
-    @Test
-    public void shouldClearAllToNull() {
-        //В этом тесте не пойму у меня в мейне в консоль выводится null вполне, а тут чет не получается.
 
-      /*  //given
-        stringList.add("");
-
-        //when
-        stringList.clear();
-        StringList actual = stringList;
-        //StringList expected = null;
-
-        //then
-        Assertions.assertNull(actual);
-*/
-
-    }
-
-    @Test
-    public void shouldReturnArrayOfStrings() {
-        //здесь тоже не догнал, может вообще на последние два тесты и не нужны )). Тут почему-то неадеквато работает assertEquals, может чтобы
-        // было норм, нужно создавать модель? Если бы еще не сегоняшняее дз поковырялся, а так боюсь не успеть...
-
-        /*//given
-        stringList.add("1");
-        stringList.add("2");
-        stringList.add("3");
-
-        //when
-        String[] actual = stringList.toArray();
-        String[] expected = {"1", "2", "3"};
-
-        //then
-        //assertEquals(expected, actual);
-        Assertions.assertEquals(expected, actual);*/
-
-    }
 }
